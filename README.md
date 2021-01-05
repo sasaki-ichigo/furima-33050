@@ -53,7 +53,7 @@
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
 | item_name   | string     | null: false                    |
-| explanation | string     | null: false                    |
+| explanation | text       | null: false                    |
 | category_id | string     | null: false                    |
 | state_id    | string     | null: false                    |
 | burden_id   | string     | null: false                    |
