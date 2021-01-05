@@ -60,8 +60,6 @@
 | area_id     | integer    | null: false                    |
 | days_id     | integer    | null: false                    |
 | price       | integer    | null: false                    |
-| fee         | text       | null: false                    |
-| profit      | text       | null: false                    |
 | user        | references | null: false, foreign_key: true |
 | order       | references | null: false, foreign_key: true |
 
