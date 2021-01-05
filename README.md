@@ -23,11 +23,11 @@
 
 | Column                | Type       | Options                        |
 | --------------------- | ---------- | ------------------------------ |
-| postal_code           | text       | null: false                    |
+| postal_code           | string     | null: false                    |
 | prefectures_id        | integer    | null: false                    |
-| municipality          | text       | null: false                    |
-| address               | text       | null: false                    |
-| building_name         | text       |                                |
+| municipality          | string     | null: false                    |
+| address               | string     | null: false                    |
+| building_name         | string     |                                |
 | phone_number          | string     | null: false                    |
 
 ### Association
