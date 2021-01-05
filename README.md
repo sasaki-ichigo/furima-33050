@@ -28,7 +28,7 @@
 | municipality          | text       | null: false                    |
 | address               | text       | null: false                    |
 | building_name         | text       |                                |
-| postal_code           | text       | null: false                    |
+| phone_number          | string     | null: false                    |
 | order                 | references | null: false, foreign_key: true |
 
 ### Association
