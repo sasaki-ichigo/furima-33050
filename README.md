@@ -38,17 +38,6 @@
 - has_many :items
 - has_one :addresses
 
-
-## addresses テーブル
-
-| Column                | Type       | Options                        |
-| --------------------- | ---------- | ------------------------------ |
-
-
-### Association
-
-- belongs_to :order
-
 ## order_users テーブル
 
 | Column | Type       | Options                        |
