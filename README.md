@@ -23,7 +23,13 @@
 
 | Column                | Type       | Options                        |
 | --------------------- | ---------- | ------------------------------ |
-
+| postal_code           | text       | null: false                    |
+| prefectures           | text       | null: false                    |
+| municipality          | text       | null: false                    |
+| address               | text       | null: false                    |
+| building_name         | text       |                                |
+| postal_code           | text       | null: false                    |
+| order                 | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -37,13 +43,7 @@
 
 | Column                | Type       | Options                        |
 | --------------------- | ---------- | ------------------------------ |
-| postal_code           | text       | null: false                    |
-| prefectures           | text       | null: false                    |
-| municipality          | text       | null: false                    |
-| address               | text       | null: false                    |
-| building_name         | text       |                                |
-| postal_code           | text       | null: false                    |
-| order                 | references | null: false, foreign_key: true |
+
 
 ### Association
 
