@@ -29,7 +29,6 @@
 | address               | text       | null: false                    |
 | building_name         | text       |                                |
 | phone_number          | string     | null: false                    |
-| order                 | references | null: false, foreign_key: true |
 
 ### Association
 
