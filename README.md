@@ -59,7 +59,7 @@
 | burden_id   | string     | null: false                    |
 | area_id     | string     | null: false                    |
 | days_id     | string     | null: false                    |
-| price       | text       | null: false                    |
+| price       | integer    | null: false                    |
 | fee         | text       | null: false                    |
 | profit      | text       | null: false                    |
 | user        | references | null: false, foreign_key: true |
