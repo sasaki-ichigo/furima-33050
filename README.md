@@ -54,11 +54,11 @@
 | ----------- | ---------- | ------------------------------ |
 | item_name   | string     | null: false                    |
 | explanation | string     | null: false                    |
-| category    | text       | null: false                    |
-| state       | text       | null: false                    |
-| burden      | text       | null: false                    |
-| area        | text       | null: false                    |
-| days        | text       | null: false                    |
+| category_id | string     | null: false                    |
+| state_id    | string     | null: false                    |
+| burden_id   | string     | null: false                    |
+| area_id     | string     | null: false                    |
+| days_id     | string     | null: false                    |
 | price       | text       | null: false                    |
 | fee         | text       | null: false                    |
 | profit      | text       | null: false                    |
