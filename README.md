@@ -35,7 +35,6 @@
 - has_many :order_users
 - has_many :users, through: order_users
 - has_many :items
-- has_one :addresses
 
 ## order_users テーブル
 
