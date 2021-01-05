@@ -23,10 +23,7 @@
 
 | Column                | Type       | Options                        |
 | --------------------- | ---------- | ------------------------------ |
-| card_information      | text       | null: false                    |
-| expiration_date_month | text       | null: false                    |
-| expiration_date_year  | text       | null: false                    |
-| security_code         | text       | null: false                    |
+
 
 ### Association
 
