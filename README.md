@@ -44,7 +44,7 @@
 
 ### Association
 
-- has_many :order_users
+- belongs_to :order
 
 ## items テーブル
 
