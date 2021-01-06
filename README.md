@@ -19,7 +19,7 @@
 - has_many :orders, through: order_users
 - has_many :items
 
-## orders テーブル
+## Shipping_addresses テーブル
 
 | Column        | Type    | Options     |
 | ------------- | --------| ------------|
