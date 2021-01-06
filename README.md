@@ -21,13 +21,11 @@
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| order  | references | null: false, foreign_key: true |
+|        |            |                                |
 
 ### Association
 
-- belongs_to :order
-- belongs_to :user
+- has_one :address
 
 ## addresses テーブル
 
