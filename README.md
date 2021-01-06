@@ -36,7 +36,7 @@
 - has_many :users, through: order_users
 - has_many :items
 
-## order_users テーブル
+## orders テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
