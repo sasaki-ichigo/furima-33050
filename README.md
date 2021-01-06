@@ -15,8 +15,6 @@
 
 ### Association
 
-- has_many :order_users
-- has_many :orders, through: order_users
 - has_many :items
 
 ## orders テーブル
