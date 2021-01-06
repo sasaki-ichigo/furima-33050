@@ -15,18 +15,21 @@
 
 ### Association
 
+- has_many :orders
 - has_many :items
 
 ## orders テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
 | item   | references | null: false, foreign_key: true |
 
 ### Association
 
-- has_one :address
+- belongs_to :user
 - belongs_to :item
+- has_one :address
 
 ## addresses テーブル
 
