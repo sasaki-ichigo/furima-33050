@@ -19,7 +19,19 @@
 - has_many :orders, through: order_users
 - has_many :items
 
-## Shipping_addresses テーブル
+## orders テーブル
+
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
+| order  | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :order
+- belongs_to :user
+
+## addresses テーブル
 
 | Column        | Type    | Options     |
 | ------------- | --------| ------------|
@@ -35,18 +47,6 @@
 - has_many :order_users
 - has_many :users, through: order_users
 - has_many :items
-
-## orders テーブル
-
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| order  | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :order
-- belongs_to :user
 
 ## items テーブル
 
