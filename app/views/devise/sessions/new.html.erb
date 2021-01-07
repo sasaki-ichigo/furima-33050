@@ -1,6 +1,8 @@
 <%= render "shared/second-header"%>
-
-<%= form_with class: 'registration-main', local: true do |f| %>
+<%# @user:User.findされた情報が入っている %>
+<%# user_session_path:ユーザーログインの処理 %>
+<%# @userの情報の中に「email」「password」と同じ情報があればログインできる %>
+<%= form_with  model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
 <div class='form-wrap'>
   <div class='form-header'>
     <h1 class='form-header-text'>
