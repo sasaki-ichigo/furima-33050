@@ -199,8 +199,3 @@ RSpec.describe User, type: :model do
     end
   end
 end
-
-# binding.pry
-# @user.errors.full_messages
-# another_user.errors.full_messages
-# bundle exec rspec spec/models/user_spec.rb

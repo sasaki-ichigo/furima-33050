@@ -118,8 +118,3 @@ RSpec.describe Item, type: :model do
     end
   end
 end
-
-# binding.pry
-# @item.errors
-# @item.errors.full_messages
-# bundle exec rspec spec/models/item_spec.rb
