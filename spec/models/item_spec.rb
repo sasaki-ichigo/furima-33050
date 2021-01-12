@@ -113,12 +113,12 @@ RSpec.describe Item, type: :model do
       it '販売価格が半角英数混合では商品の出品ができない' do
         @item.price = '123abc'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price Half-width number")
+        expect(@item.errors.full_messages).to include('Price Half-width number')
       end
       it '販売価格が半角英語では商品の出品ができない' do
         @item.price = 'abcdef'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price Half-width number")
+        expect(@item.errors.full_messages).to include('Price Half-width number')
       end
       it 'userが紐付いていないと保存できないこと' do
         @item.user = nil
