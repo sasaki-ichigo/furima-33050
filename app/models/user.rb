@@ -19,6 +19,6 @@ class User < ApplicationRecord
     validates :first_name_kana
   end
 
-  # has_many :orders
+  has_many :orders
   has_many :items
 end
