@@ -8,7 +8,7 @@ RSpec.describe OrderAddress, type: :model do
   describe '商品購入機能' do
     context '商品の購入ができる時' do
       # - 必要な情報を適切に入力すると、商品の購入ができること
-      it 'postal_codeとprefecture_idとmunicipalityとaddressとbuilding_nameとphone_numberが存在すれば商品の出品ができる' do
+      it 'tokenとpostal_codeとprefecture_idとmunicipalityとaddressとbuilding_nameとphone_numberが存在すれば商品の出品ができる' do
         expect(@order_address).to be_valid
       end
       # - 建物名が空でも、商品の購入ができること
@@ -19,6 +19,12 @@ RSpec.describe OrderAddress, type: :model do
     end
     
     context '商品の購入ができない時' do
+      # - クレジットカード情報は必須であり、正しいクレジットカードの情報で無いときは決済できないこと
+      it 'tokenが空では商品の購入ができない' do
+        @order_address.token = ''
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include("Token can't be blank")
+      end
       # - 配送先の情報として、郵便番号・都道府県・市区町村・番地・電話番号が必須であること
       # - 郵便番号が必須であること
       it 'postal_codeが空では商品の購入ができない' do
