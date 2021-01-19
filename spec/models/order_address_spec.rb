@@ -2,13 +2,16 @@ require 'rails_helper'
 
 RSpec.describe OrderAddress, type: :model do
   before do
-    @order_address = FactoryBot.build(:order_address)
+    @item = FactoryBot.create(:item)
+    @user = FactoryBot.create(:user)
+    sleep 1
+    @order_address = FactoryBot.build(:order_address, user_id: @user.id, item_id: @item.id)
   end
 
   describe '商品購入機能' do
     context '商品の購入ができる時' do
       # - 必要な情報を適切に入力すると、商品の購入ができること
-      it 'tokenとpostal_codeとprefecture_idとmunicipalityとaddressとbuilding_nameとphone_numberが存在すれば商品の出品ができる' do
+      it 'tokenとpostal_codeとprefecture_idとmunicipalityとaddressとbuilding_nameとphone_numberとuser_idとitem_idが存在すれば商品の出品ができる' do
         expect(@order_address).to be_valid
       end
       # - 建物名が空でも、商品の購入ができること
@@ -110,11 +113,16 @@ RSpec.describe OrderAddress, type: :model do
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include('Phone number Input only number')
       end
+      it 'userが紐付いていないと保存できないこと' do
+        @order_address.user_id = nil
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include("User can't be blank")
+      end
+      it 'itemが紐付いていないと保存できないこと' do
+        @order_address.item_id = nil
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include("Item can't be blank")
+      end
     end
   end
 end
-
-# bundle exec rspec spec/models/order_address_spec.rb
-# @order_address.valid?
-# @order_address.errors
-# @order_address.errors.full_messages
